@@ -6,7 +6,7 @@ import { useResumeStore } from "@/features/resume-builder/stores/useResumeStore"
 import { useState } from "react";
 import { ResumeOutput } from "@/features/resume-builder/types";
 import { Skeleton } from "@/ui/Skeleton";
-import { AlertCircle, Wand2 } from "lucide-react";
+import { AlertCircle, Wand2, FileText } from "lucide-react";
 
 export default function ResumeBuilderPage() {
     const { data, step } = useResumeStore();

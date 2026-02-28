@@ -30,20 +30,24 @@ export async function POST(request: Request) {
         // For this implementation, we'll simulate the process and log output
         // To actually run it, uncomment the spawn logic below
 
-        /*
+
         const child = spawn("gemini", [cliCommand], {
           shell: true,
           cwd: process.cwd(),
         });
-    
+
         child.stdout.on("data", (data) => {
           console.log(`Agent Output: ${data}`);
         });
-    
+
         child.stderr.on("data", (data) => {
           console.error(`Agent Error: ${data}`);
         });
-        */
+
+        child.on("error", (error) => {
+          console.error(`Agent CLI Error: ${error.message}`);
+        });
+
 
         // Simulate successful execution for the demo
         await new Promise((resolve) => setTimeout(resolve, 5000));
