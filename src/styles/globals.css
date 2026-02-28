@@ -1,0 +1,17 @@
+@import "./tokens.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+        @apply bg-bg text-text-primary font-sans antialiased;
+    }
+}
+
+@layer utilities {
+    .glass {
+        @apply bg-surface/80 backdrop-blur-md border border-border;
+    }
+}
