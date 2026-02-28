@@ -4,7 +4,7 @@ import { useState, useEffect, useCallback } from "react";
 import { CommandInput } from "@/features/dashboard/components/CommandInput";
 import { ActivityFeed, LogEntry } from "@/features/dashboard/components/ActivityFeed";
 import { GalleryGrid, ImageAsset } from "@/features/dashboard/components/GalleryGrid";
-import { Sparkles, Activity, Package } from "lucide-react";
+import { Sparkles, Activity, Package, Terminal } from "lucide-react";
 
 export default function DashboardPage() {
     const [isRunning, setIsRunning] = useState(false);

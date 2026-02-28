@@ -2,9 +2,9 @@ import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 import { jwtVerify } from "jose";
 
-const SECRET = new TextEncoder().encode(process.env.ADMIN_PASSWORD || "default-secret-key-123");
 
 export async function middleware(request: NextRequest) {
+    const SECRET = new TextEncoder().encode(process.env.ADMIN_PASSWORD || "default-secret-key-123");
     const token = request.cookies.get("auth-token")?.value;
     const { pathname } = request.nextUrl;
 
